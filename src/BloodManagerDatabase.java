@@ -40,11 +40,11 @@ class BloodManagerDatabase
 			while(rs != null && rs.next()) {
 				String[] p = {
 					rs.getString("name"), 
-					("phone"),
-					("address"),
-					("email"),
-					("type"),
-					("rheus"),
+					rs.getString("phone"),
+					rs.getString("address"),
+					rs.getString("email"),
+					rs.getString("type"),
+					rs.getString("rheus"),
 					"patient"
 				};
 				createObject(p);
@@ -53,11 +53,11 @@ class BloodManagerDatabase
 			while(rs != null && rs.next()) {
 				String[] b = {
 					rs.getString("label"),
-					("donor"),
-					("collectiondate"),
-					("expirydate"),
-					("type"),
-					("rheus"),
+					rs.getString("donor"),
+					rs.getString("collectiondate"),
+					rs.getString("expirydate"),
+					rs.getString("type"),
+					rs.getString("rheus"),
 					"bloodbag"
 				};
 				createObject(b);
@@ -88,6 +88,7 @@ class BloodManagerDatabase
 				Patient p = new Patient(str[0], Integer.parseInt(str[1]), str[2],
 				str[3], str[4], str[5]);
 				patients.addPatient(p);
+			break;
 			case "bloodbag" :
 				BloodBag bb = new BloodBag(Integer.parseInt(str[0]), str[1],
 				str[2], str[3], str[4], str[5]);

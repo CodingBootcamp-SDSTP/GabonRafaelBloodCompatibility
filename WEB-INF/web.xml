@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<web-app>
+	<display-name>Blood Compatibility</display-name>
+	<description>Blood App</description>
+	<servlet>
+		<servlet-name>All Patient</servlet-name>
+		<servlet-class>AllPatientServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>All Patient</servlet-name>
+		<url-pattern>/patient</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>All BloodBag</servlet-name>
+		<servlet-class>AllBloodBagServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>All BloodBag</servlet-name>
+		<url-pattern>/bloodbag</url-pattern>
+	</servlet-mapping>
+</web-app>
+

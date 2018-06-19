@@ -5,7 +5,8 @@ class Patient extends Blood
 	private String address;
 	private String email;
 
-	public Patient(String n, int p, String a, String e, String t, String r) {
+	public Patient(String n, int p, String a, String e,
+	String t, String r) {
 		name = n;
 		phone = p;
 		address = a;
