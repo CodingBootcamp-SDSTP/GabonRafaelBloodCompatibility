@@ -1,21 +1,18 @@
-class Blood
+public class Blood
 {
-	private String type;
-	private String rheus;
+	private final String TYPE;
+	private final String RHEUS;
 
-	public String getType() {
-		return(type);
+	public Blood (String t, String r) {
+		TYPE = t;
+		RHEUS = r;
 	}
 
-	public String getRheus() {
-		return(rheus);
+	public String getTYPE() {
+		return(TYPE);
 	}
 
-	public void setType(String t) {
-		type = t;
-	}
-
-	public void setRheus(String r) {
-		rheus = r;
+	public String getRHEUS() {
+		return(RHEUS);
 	}
 }

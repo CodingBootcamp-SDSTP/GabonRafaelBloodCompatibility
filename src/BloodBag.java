@@ -1,33 +1,23 @@
-class BloodBag extends Blood
+public class BloodBag
 {
+	private final int ID;
+	private int label;
 	private String donor;
 	private String collectionDate;
 	private String expiryDate;
-	private int label;
+	private Blood blood;
 
-	public BloodBag( int l, String d, String cd, String ed, String t, String r) {
+	public BloodBag(int id, String d, String cd, String ed, String type, String rheus, int l) {
+		blood = new Blood(type, rheus);
+		ID = id;
 		label = l;
 		donor = d;
 		collectionDate = cd;
-		expiryDate = ed;
-		setType(t);
-		setRheus(r);
+		expiryDate = ed;;
 	}
 
-	public String getDonor() {
-		return(donor);
-	}
-
-	public String getCollectionDate() {
-		return(collectionDate);
-	}
-
-	public String getExpiryDate() {
-		return(expiryDate);
-	}
-
-	public int getLabel() {
-		return(label);
+	public void setBlood(Blood b) {
+		blood = b;
 	}
 
 	public void setDonor(String d) {
@@ -44,5 +34,29 @@ class BloodBag extends Blood
 
 	public void setLabel(int l) {
 		label = l;
+	}
+
+	public int getID() {
+		return(ID);
+	}
+
+	public Blood getBlood() {
+		return(blood);
+	}
+
+	public String getDonor() {
+		return(donor);
+	}
+
+	public String getCollectionDate() {
+		return(collectionDate);
+	}
+
+	public String getExpiryDate() {
+		return(expiryDate);
+	}
+
+	public int getLabel() {
+		return(label);
 	}
 }

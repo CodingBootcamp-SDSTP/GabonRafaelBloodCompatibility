@@ -26,16 +26,20 @@ public class AllPatientServlet extends HttpServlet
 		StringBuffer sb = new StringBuffer("<patients>");
 		ArrayList<Patient> patient = patients.getAllPatients();
 		for(Patient p : patient) {
-			sb.append("<patient><name>");
+			sb.append("<patient><patientsid>");
+			sb.append(p.getID());
+			sb.append("</patientsid><name>");
 			sb.append(p.getName());
 			sb.append("</name><phone>");
 			sb.append(p.getPhone());
 			sb.append("</phone><address>");
 			sb.append(p.getAddress());
-			sb.append("</address><type>");
-			sb.append(p.getType());
+			sb.append("</address><email>");
+			sb.append(p.getEmail());
+			sb.append("</email><type>");
+			sb.append(p.getBlood().getTYPE());
 			sb.append("</type><rheus>");
-			sb.append(p.getRheus());
+			sb.append(p.getBlood().getRHEUS());
 			sb.append("</rheus></patient>");
 		}
 		sb.append("</patients>");

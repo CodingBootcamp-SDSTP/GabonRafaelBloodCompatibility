@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class BloodBagCollection
+public class BloodBagCollection
 {
 	ArrayList<BloodBag> bloodBags;
 

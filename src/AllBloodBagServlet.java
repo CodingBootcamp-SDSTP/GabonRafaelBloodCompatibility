@@ -25,19 +25,21 @@ public class AllBloodBagServlet extends HttpServlet
 		StringBuffer sb = new StringBuffer("<bloodbags>");
 		ArrayList<BloodBag> bloodBag = bloodbags.getAllBloodBags();
 		for(BloodBag bb : bloodBag) {
-			sb.append("<bloodbag><label>");
-			sb.append(bb.getLabel());
-			sb.append("</label><donor>");
+			sb.append("<bloodbag><id>");
+			sb.append(bb.getID());
+			sb.append("</id><donor>");
 			sb.append(bb.getDonor());
 			sb.append("</donor><collectiondate>");
 			sb.append(bb.getCollectionDate());
 			sb.append("</collectiondate><expirydate>");
 			sb.append(bb.getExpiryDate());
 			sb.append("</expirydate><type>");
-			sb.append(bb.getType());
+			sb.append(bb.getBlood().getTYPE());
 			sb.append("</type><rheus>");
-			sb.append(bb.getRheus());
-			sb.append("</rheus></bloodbag>");
+			sb.append(bb.getBlood().getRHEUS());
+			sb.append("</rheus><label>");
+			sb.append(bb.getLabel());
+			sb.append("</label></bloodbag>");
 		}
 		sb.append("</bloodbags>");
 		return(sb.toString());
